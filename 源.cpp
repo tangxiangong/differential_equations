@@ -14,7 +14,7 @@ int main()
 	double h = 1e-6;
 	int n = int((1.0 - 0.0) / h);
 	
-	y = euler(0.0, 1.0, 1.0, ff, h);
+	y = euler(0.0, 1.0, 1.0, f_euler, h);
 	
 	clock_t end = clock();
 	cout << (end - begin) << endl;
@@ -27,7 +27,7 @@ int main()
 	out2.open("result.dat", ios::out);
 	for (int i = 0; i < n + 1; i++)
 	{
-		err = real(i * h) - y[i];
+		err = real_euler(i * h) - y[i];
 		out1 << i * h << "\t";
 		out2 << i * h << "\t";
 		out2 << y[i] << endl;

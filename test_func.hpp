@@ -1,11 +1,11 @@
 #pragma once
 
-double ff(double x, double y)
+double f_euler(double x, double y)
 {
 	return 2 * x;
 }
 
-double real(double x)
+double real_euler(double x)
 {
 	return x * x + 1;
 }
